@@ -16,22 +16,20 @@
   <meta name="msapplication-TileColor" content="#FFFFFF">
 </head>
 <body class="fullscreen">
-    <div id="gameContainer">
-        <h1>Typing or Dead</h1>
-        <h2>Enter the word before the time bar ends</h2>     
-        <button type="submit" id = "startButton">START GAME</button>
-        <h2 id = "titleWord"></h2>
-        <h2 id = "randomWord"></h2>      
-        <div id = "countDown"></div>
-        <div>
-            <input type="text" id="inputWord">  
-        </div> 
-        <div id = "infoSection">
-            <p id = "score"></p>   
-            <p id = "level"></p>       
-        </div>    
-        <div id = "message"></div>
-        <button  type="submit" id = "restartButton">PLAY AGAIN</button>
+    <div class="container">
+        <h1>Typing Game</h1>
+        <div class="word-display">
+            <span id="word"></span>
+        </div>
+        <input type="text" id="user-input" disabled>
+        <div class="stats">
+            <p>Time left: <span id="timer">60</span></p>
+            <p>Characters typed: <span id="characters">0</span></p>
+            <p>Words typed: <span id="words">0</span></p>
+        </div>
+        <button id="start-game" onclick="startGame()">Game Start</button>
+        <h2 id="finish-message" class="hidden">Finish!</h2>
+        <button id="play-again" class="hidden" onclick="playAgain()">Play Again?</button>
     </div>
     <script src="typing.js"></script>
     <script src="js/main.js"></script>
