@@ -16,24 +16,22 @@
   <meta name="msapplication-TileColor" content="#FFFFFF">
 </head>
 <body class="fullscreen">
-    <div class="wrapper">
-        <h1>Typing game</h1>
-        <p>Type as many words as you can until time runs out!</p>
-        <button>START</button>
-        <div class="outerWrap">
-            <div class="scoreWrap">
-                <p>Score</p>
-                <span class="score">0</span>
-            </div>
-            <div class="timeWrap">
-                <p>Time left</p>
-                <span class="time">60</span>
-            </div>
-        </div>
-      <textarea></textarea>
-        <div class="wordsWrap">
-            <p class="words"></p>
-        </div>
+    <div id="gameContainer">
+        <h1>Typing or Dead</h1>
+        <h2>Enter the word before the time bar ends</h2>     
+        <button type="submit" id = "startButton">START GAME</button>
+        <h2 id = "titleWord"></h2>
+        <h2 id = "randomWord"></h2>      
+        <div id = "countDown"></div>
+        <div>
+            <input type="text" id="inputWord">  
+        </div> 
+        <div id = "infoSection">
+            <p id = "score"></p>   
+            <p id = "level"></p>       
+        </div>    
+        <div id = "message"></div>
+        <button  type="submit" id = "restartButton">PLAY AGAIN</button>
     </div>
     <script src="typing.js"></script>
     <script src="js/main.js"></script>
