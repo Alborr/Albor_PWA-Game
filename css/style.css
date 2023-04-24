@@ -1,81 +1,55 @@
-#inputWord {
-    display: none;  
-    margin-left : auto;
-    margin-right : auto;
-    margin-top: 5px;
-    width: 180px;
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-#titleWord{
-    margin-top: 10px;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
 }
 
-#restartButton{
-    display: none;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    width: 150px;
-    height: 30px;
-}
-
-#gameContainer{
-    border: solid 2px red;
-    width: 400px;
-    height: 250px;
-    position: relative;
-    top : 50px;
-    left: 250px;   
-}
-
-h1, h2{
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin: 0px auto 5px auto;
-    clear: both;
 }
 
-h1{
-    margin-top: 10px;
+.word-display {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-#startButton{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    display: block;
-    width: 200px;
-    height: 50px;
+input {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
 }
 
-.progressBar{
-    height: 10px;    
-    display: block;
-    margin-left: 110px;
-    animation-name: countDown;  
-    clear: both;
+.stats {
+    display: flex;
+    justify-content: space-around;
 }
 
-#message{
-    margin-left: 155px;
-    clear: both;
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
-#score{
-    margin-left: 10px;
-    float: left;
-}
-
-#level{
-    margin-right: 10px;
-    float: right;
-}
-
-@keyframes countDown{
-    from{width: 180px;}
-    to{width: 0px;}
-    0% {background-color: green;}
-    40%{background-color: yellowgreen}
-    70%{background-color: red;}
+.hidden {
+    display: none;
 }
