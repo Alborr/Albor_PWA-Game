@@ -1,85 +1,81 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+#inputWord {
+    display: none;  
+    margin-left : auto;
+    margin-right : auto;
+    margin-top: 5px;
+    width: 180px;
 }
 
-body {
-    background-color: #353535;
-    font-family: 'Raleway', sans-serif;
+#titleWord{
+    margin-top: 10px;
 }
 
-.wrapper {
-    max-width: 600px;
-    margin: 0 auto;
-    width: 100%;
+#restartButton{
+    display: none;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 30px;
+}
+
+#gameContainer{
+    border: solid 2px red;
+    width: 400px;
+    height: 250px;
+    position: relative;
+    top : 50px;
+    left: 250px;   
+}
+
+h1, h2{
     text-align: center;
-    padding: 2%;
-    background-color: #424242;
-    height: 500px;
-}
-
-h1 {
-    color: #ecf0f1;
-}
-
-    h1 + p {
-        margin-bottom: 5%;
-        color: #3498db;
-    }
-
-.scoreWrap {
-    float: left;
-}
-
-.timeWrap {
-    float: right;
-}
-
-.outerWrap:after {
-    content: "";
-    display: block;
+    margin: 0px auto 5px auto;
     clear: both;
 }
 
-.bg {
-    background-color: #04AF71;
+h1{
+    margin-top: 10px;
 }
 
-button {
-    border: none;
-    background-color: #FF7373;
-    box-shadow: 0px 5px 0px 0px #CE4646;
-    outline: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 22px;
-    text-decoration: none;
-    margin: 20px;
-    color: #fff;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+#startButton{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: block;
+    width: 200px;
+    height: 50px;
 }
 
-    button:active {
-        transform: translate(0px, 5px);
-        -webkit-transform: translate(0px, 5px);
-        box-shadow: 0px 1px 0px 0px;
-    }
-
-.scoreWrap p, .scoreWrap span, .timeWrap p, .timeWrap span {
-    font-size: 30px;
-    color: #FF7373;
+.progressBar{
+    height: 10px;    
+    display: block;
+    margin-left: 110px;
+    animation-name: countDown;  
+    clear: both;
 }
 
-.wordsWrap {
-    margin-top: 50px;
+#message{
+    margin-left: 155px;
+    clear: both;
 }
 
-.words span {
-    font-size: 60px;
-    letter-spacing: 1px;
-    color: #ECF0F1;
+#score{
+    margin-left: 10px;
+    float: left;
+}
+
+#level{
+    margin-right: 10px;
+    float: right;
+}
+
+@keyframes countDown{
+    from{width: 180px;}
+    to{width: 0px;}
+    0% {background-color: green;}
+    40%{background-color: yellowgreen}
+    70%{background-color: red;}
 }
